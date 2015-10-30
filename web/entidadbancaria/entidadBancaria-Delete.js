@@ -2,6 +2,7 @@ DeleteController.$inject = ['$scope', '$routeParams', 'entidadBancariaService'];
 
 function DeleteController($scope, $routeParams, entidadBancariaService) {
     $scope.identidad = $routeParams.idEntidadBancaria;
+    $scope.tipo = "DELETE";
     $scope.borrar = function () {
 
         var response = entidadBancariaService.delete($routeParams.idEntidadBancaria);

@@ -1,6 +1,6 @@
 InsertController.$inject = ['$scope', 'entidadBancariaService'];
 function InsertController($scope, entidadBancariaService) {
-
+    $scope.tipo = "INSERT";
     $scope.entidadBancaria = {};
 
     $scope.insertar = function () {

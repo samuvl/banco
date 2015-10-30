@@ -1,6 +1,6 @@
 UpdateController.$inject = ['$scope', '$routeParams' ,'entidadBancariaService'];
 function UpdateController($scope, $routeParams, entidadBancariaService) {
-
+    $scope.tipo = "UPDATE";
     $scope.entidadBancaria = {};
     $scope.entidadBancaria.idEntidadBancaria = $routeParams.idEntidadBancaria;
 
