@@ -1,0 +1,35 @@
+quitar controlador de los html
+
+poner otra ruita find con parametro nombre (O dejar solo las 3 lineas despues del primer if, solo hace falta eso en verdad)
+
+
+quitar form de insert (y ver si queda bien)
+
+update primero hacer un get para mostrar los datos inicialmente
+y luego ya cambiar y darle a actualizar
+
+
+delete:
+Cambiar nombre variable identidad por idEntidadBancaria
+Tambien mostrar los datos nada mas entrar a Borrar
+
+No mostrar el ID, el nombre en todo caso, pero mejor enseñar todo completamente (MISMA PANTALLA (html) get inser delete update)
+
+
+Services:
+
+Quitar idEntidadBancaria ya que le pasas entidadBancaria.identidadBancaria asi quitamos  1 parametro
+
+
+
+
+
+EXAMEN DE LA MUERTE LORENZO GONZALEZ ALIAS LOGONGAS:
+
+controlador que haga(1 cosa o 2), una ruta, que creemos clase servicio y que la clase servicio(1 funcion o 2) que haga algo y tambien poner 1 ruta
+LO que nos de esta sin acabar. Lo que esté hecho está bien.
+El hace 1 proyecto, le quita cosas y esas cosas es el examen.
+
+EJEMPLO: Falta decir dónde está definida la ruta dónde dice que están los controladores)
+EJemplo: DAO: 1 Get 1 Insert (pero con 2 campos solo)
+Igual falta la interfaz y tenemos que crearla...
