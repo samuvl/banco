@@ -3,24 +3,29 @@ app.config(['$routeProvider', function ($routeProvider) {
             templateUrl: "entidadbancaria/entidadBancaria-List.html",
             controller: "FindController"
         });
-         
+        
+        $routeProvider.when('/find/:nombre', {
+            templateUrl: "entidadbancaria/entidadBancaria-List.html",
+            controller: "FindController"
+        });        
+        
         $routeProvider.when('/get/:idEntidadBancaria', {
-            templateUrl: "entidadbancaria/entidadBancaria-Detail.html",
+            templateUrl: "entidadbancaria/detail.html",
             controller: "GetController"
         });
 
         $routeProvider.when('/delete/:idEntidadBancaria', {
-            templateUrl: "entidadbancaria/entidadBancaria-Delete.html",
+            templateUrl: "entidadbancaria/detail.html",
             controller: "DeleteController"
         });
 
         $routeProvider.when('/insert/', {
-            templateUrl: "entidadbancaria/entidadBancaria-Insert.html",
+            templateUrl: "entidadbancaria/detail.html",
             controller: "InsertController"
         });
 
         $routeProvider.when('/update/:idEntidadBancaria', {
-            templateUrl: "entidadbancaria/entidadBancaria-Update.html",
+            templateUrl: "entidadbancaria/detail.html",
             controller: "UpdateController"
         });
     }]);

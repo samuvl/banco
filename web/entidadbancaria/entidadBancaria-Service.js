@@ -44,10 +44,10 @@ function EntidadBancariaService($http) {
         return response;
     };
 
-    this.update = function (idEntidadBancaria, entidadBancaria) {
+    this.update = function (entidadBancaria) {
         var response = $http({
             method: "PUT",
-            url: "../banco-api/api/entidadbancaria/" + idEntidadBancaria,
+            url: "../banco-api/api/entidadbancaria/" + entidadBancaria.idEntidadBancaria,
             data: entidadBancaria
         });
         return response;
