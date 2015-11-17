@@ -4,7 +4,7 @@ function UpdateController($scope, $routeParams, entidadBancariaService, $locatio
     $scope.entidadBancaria = {};
     $scope.entidadBancaria.idEntidadBancaria = $routeParams.idEntidadBancaria;
     $scope.tipo = "UPDATE";
-    $scope.valorboton = "Actualizar";
+    $scope.okBoton = "Actualizar";
 
     var response = entidadBancariaService.get($routeParams.idEntidadBancaria);
 
