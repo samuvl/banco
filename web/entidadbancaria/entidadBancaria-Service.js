@@ -2,16 +2,7 @@ EntidadBancariaService.$inject = ['$http'];
 
 function EntidadBancariaService($http) {
 
-    this.delete = function (idEntidadBancaria) {
-        var response = $http({
-            method: "DELETE",
-            url: "../banco-api/api/entidadbancaria/" + idEntidadBancaria
-        });
-        return response;
-    };
-
     this.get = function (idEntidadBancaria) {
-
         var response = $http({
             method: "GET",
             url: "../banco-api/api/entidadbancaria/" + idEntidadBancaria
@@ -24,6 +15,23 @@ function EntidadBancariaService($http) {
             method: "POST",
             url: "../banco-api/api/entidadbancaria",
             data: entidadBancaria
+        });
+        return response;
+    };
+
+    this.update = function (entidadBancaria) {
+        var response = $http({
+            method: "PUT",
+            url: "../banco-api/api/entidadbancaria/" + entidadBancaria.idEntidadBancaria,
+            data: entidadBancaria
+        });
+        return response;
+    };
+
+    this.delete = function (idEntidadBancaria) {
+        var response = $http({
+            method: "DELETE",
+            url: "../banco-api/api/entidadbancaria/" + idEntidadBancaria
         });
         return response;
     };
@@ -43,15 +51,5 @@ function EntidadBancariaService($http) {
         });
         return response;
     };
-
-    this.update = function (entidadBancaria) {
-        var response = $http({
-            method: "PUT",
-            url: "../banco-api/api/entidadbancaria/" + entidadBancaria.idEntidadBancaria,
-            data: entidadBancaria
-        });
-        return response;
-    };
-
 }
 app.service("entidadBancariaService", EntidadBancariaService);
