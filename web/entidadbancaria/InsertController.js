@@ -4,7 +4,7 @@ function InsertController($scope, entidadBancariaService, $location) {
     $scope.okBoton = "Insertar";
     $scope.entidadBancaria = {};
 
-    $scope.insertar = function () {
+    $scope.ok = function () {
 
         var response = entidadBancariaService.insert($scope.entidadBancaria);
 
@@ -13,12 +13,16 @@ function InsertController($scope, entidadBancariaService, $location) {
         });
 
         response.error(function (data, status, headers, config) {
-            alert("Ha fallado la petición. Estado HTTP:" + status);
+            if (status === 500) {
+                alert("Ha fallado la petición. Estado HTTP:" + status);
+            } else {
+                $scope.businessMessages = data;
+            }
         });
     };
     $scope.cancel = function () {
         $location.url('/');
-    }
+    };
 
 }
 app.controller("InsertController", InsertController);
