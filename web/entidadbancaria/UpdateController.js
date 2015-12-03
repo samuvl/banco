@@ -22,9 +22,21 @@ function UpdateController($scope, $routeParams, entidadBancariaService, $locatio
         
         response.success(function (data, status, headers, config) {
             alert("Actualizado con Éxito la Entidad Bancaria: " + $scope.entidadBancaria.idEntidadBancaria);
+                //Volver a cargar la entidad
+                var response = entidadBancariaService.get($routeParams.idEntidadBancaria);
+                response.success(function (data, status, headers, config) {
+                    $scope.entidadBancaria = data;
+                });
+                response.error(function (data, status, headers, config) {
+                    alert("Ha fallado la petición. Estado HTTP:" + status);
+                });
         });
         response.error(function (data, status, headers, config) {
-            alert("Ha fallado la petición. Estado HTTP:" + status);
+            if (status === 500) {
+                alert("Ha fallado la petición. Estado HTTP:" + status);
+            } else {
+                $scope.businessMessages = data;
+            }
         });
     };
     
